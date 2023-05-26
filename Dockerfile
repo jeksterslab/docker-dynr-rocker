@@ -37,6 +37,9 @@ RUN install2.r --error \
         lavaan         \
         OpenMx
 
+# to build documentation
+RUN R "devtools::install_version(package = 'roxygen2',version = '5.0.1', repos = c(CRAN = 'https://cran.rstudio.com'))"
+
 # dynr
 RUN git clone https://github.com/jeksterslab/dynr.git \
     && cd dynr \
