@@ -1,7 +1,7 @@
 FROM jeksterslab/rocker
 
 RUN wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz \
-    && tar zxvpf gsl-latest.tar.gz \
+    && tar -zxvpf gsl-latest.tar.gz \
     && ./configure && make \
     && rm -rf gsl-latest.tar.gz
 
