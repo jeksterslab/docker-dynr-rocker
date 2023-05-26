@@ -1,9 +1,10 @@
 FROM jeksterslab/rocker
 
-RUN wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz \
-    && tar -zxvpf gsl-latest.tar.gz \
-    && ./configure && make \
-    && rm -rf gsl-latest.tar.gz
+RUN wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz
+RUN tar -zxvpf gsl-latest.tar.gz
+RUN sh configure
+RUN make
+RUN rm -rf gsl-latest.tar.gz
 
 # install R packages
 # dynr dependencies
