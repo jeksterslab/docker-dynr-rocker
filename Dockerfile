@@ -38,9 +38,8 @@ RUN install2.r --error \
         OpenMx
 
 # dynr
-RUN wget https://github.com/mhunter1/dynr/archive/refs/tags/v0.1.16.tar.gz \
-    && tar -xvzf v0.1.16.tar.gz \
-    && cd dynr-0.1.16 \
+RUN git clone https://github.com/mhunter1/dynr.git \
+    && cd dynr \
     && ./configure \
     && make install
 
