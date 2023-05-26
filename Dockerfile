@@ -35,8 +35,13 @@ RUN install2.r --error \
         rmarkdown      \
         RcppGSL        \
         lavaan         \
-        OpenMx         \
-        dynr
+        OpenMx
+
+# dynr
+RUN git clone https://github.com/jeksterslab/dynr.git \
+    && cd dynr \
+    && ./configure \
+    && make install
 
 # author
 MAINTAINER "Ivan Jacob Agaloos Pesigan <learn.jeksterslab@gmail.com>"
