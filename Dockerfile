@@ -39,7 +39,7 @@ RUN install2.r --error \
 
 # dynr
 RUN wget https://github.com/mhunter1/dynr/archive/refs/tags/v0.1.16.tar.gz \
-    && tar -xvzf v0.1.16.tar.gz dynr \
+    && tar -xvzf v0.1.16.tar.gz \
     && cd dynr-0.1.16 \
     && ./configure \
     && make install
