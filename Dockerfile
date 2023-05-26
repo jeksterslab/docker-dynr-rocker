@@ -2,7 +2,7 @@ FROM jeksterslab/rocker
 
 # apt
 RUN apt-get update -y && apt-get install -y \
-        libgsl-dev                          
+        libgsl0-dev
 
 # install R packages
 # dynr dependencies

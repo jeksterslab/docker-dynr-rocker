@@ -8,7 +8,7 @@ Ivan Jacob Agaloos Pesigan
 
 ## Description
 
-Docker and Apptainer/Singularity containers for R projects based on `rocker/tidyverse` with `dynr`.
+Docker and Apptainer/Singularity containers for R projects based on `rocker/tidyverse` with the `dynr` package.
 
 ## Build Docker Container
 
