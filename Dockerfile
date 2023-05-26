@@ -43,7 +43,6 @@ RUN Rscript -e "devtools::install_version(package = 'roxygen2',version = '5.0.1'
 # dynr
 RUN git clone https://github.com/jeksterslab/dynr.git \
     && cd dynr \
-    && ./configure \
     && make install
 
 # author
