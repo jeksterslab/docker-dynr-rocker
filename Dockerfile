@@ -41,7 +41,8 @@ RUN install2.r --error \
 RUN Rscript -e "devtools::install_version(package = 'roxygen2',version = '5.0.1', repos = c(CRAN = 'https://cran.rstudio.com'))"
 
 # dynr
-RUN git clone https://github.com/jeksterslab/dynr.git \
+RUN cd /home/rstudio \
+    && git clone https://github.com/jeksterslab/dynr.git \
     && cd dynr \
     && ./configure \
     && make clean install
