@@ -44,7 +44,7 @@ RUN Rscript -e "devtools::install_version(package = 'roxygen2',version = '5.0.1'
 RUN cd /home/rstudio \
     && git clone https://github.com/mhunter1/dynr.git \
     && cd dynr \
-    && sed -i 's/, \"shortPathName\"//g' NAMESPACE
+    && sed -i 's/, \"shortPathName\"//g' NAMESPACE \
     && ./configure \
     && make clean install
 
