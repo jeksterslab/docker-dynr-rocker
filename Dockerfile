@@ -17,12 +17,10 @@ RUN install2.r --error \
         numDeriv       \
         xtable         \
         latex2exp      \
-        grid           \
         reshape2       \
         plyr           \
         mice           \
         magrittr       \
-        methods        \
         fda            \
         car            \
         stringi        \
@@ -38,7 +36,7 @@ RUN install2.r --error \
         OpenMx
 
 # to build documentation
-RUN Rscript -e "devtools::install_version(package = 'roxygen2',version = '5.0.1', repos = c(CRAN = 'https://cran.rstudio.com'))"
+RUN Rscript -e "remotes::install_version(package = 'roxygen2', version = '5.0.1', repos = c(CRAN = 'https://cran.rstudio.com'))"
 
 # dynr
 RUN cd /home/rstudio \
