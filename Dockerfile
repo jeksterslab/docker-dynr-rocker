@@ -1,8 +1,9 @@
 FROM jeksterslab/rocker
 
-# apt
-RUN apt-get update -y && apt-get install -y \
-        libgsl0-dev
+RUN wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz \
+    && tar zxvpf gsl-latest.tar.gz \
+    && ./configure && make \
+    && rm -rf gsl-latest.tar.gz
 
 # install R packages
 # dynr dependencies
