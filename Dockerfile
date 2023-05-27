@@ -50,6 +50,7 @@ RUN apt-get update -y && apt-get install -y \
         "                                                          && \
         git clone https://github.com/mhunter1/dynr.git             && \
         cd dynr                                                    && \
+        sed -i 's/, \"shortPathName\"//g' NAMESPACE                && \
         ./configure                                                && \
         make clean install                                         && \
         cd ..                                                      && \
