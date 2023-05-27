@@ -21,6 +21,7 @@ RUN wget https://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz \
 RUN install2.r --error \
         devtools       \
         remotes        \
+        tinytex        \
         MASS           \
         Matrix         \
         numDeriv       \
@@ -37,12 +38,11 @@ RUN install2.r --error \
         deSolve        \
         Rdpack         \
         testthat       \
-        roxygen2       \
         knitr          \
         rmarkdown
 
 # to build documentation
-RUN Rscript -e "remotes::install_version(package = 'roxygen2', version = '5.0.1', repos = c(CRAN = 'https://cran.rstudio.com'))"
+RUN Rscript -e "remotes::install_version(package = 'roxygen2', version = '5.0.1', repos = c(CRAN = 'https://cran.rstudio.com')); tinytex::install_tinytex()"
 
 # dynr
 RUN cd /home/rstudio \
