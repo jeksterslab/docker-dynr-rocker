@@ -4,8 +4,7 @@ FROM rocker/tidyverse
 RUN apt-get update -y && apt-get install -y \
         wget                                \
         vim                                 \
-        build-essential                     \
-        libopenblas-dev
+        build-essential
 
 # gsl
 RUN wget https://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz \
