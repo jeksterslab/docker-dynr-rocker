@@ -56,9 +56,9 @@ RUN apt-get update -y && apt-get install -y \
         cd ..                                                      && \
         rm -rf dynr                                                && \
         Rscript -e "                                                  \
-                .libPaths(c('/usr/local/lib/R/site-library', '/usr/local/lib/R/library'); \
-                Sys.setenv(R_LIBS_USER = '/usr/local/lib/R/site-library')                 \
-        "                                                                              && \
+                .libPaths(c('/usr/local/lib/R/site-library', '/usr/local/lib/R/library')); \
+                Sys.setenv(R_LIBS_USER = '/usr/local/lib/R/site-library')                  \
+        "
 
 # author
 MAINTAINER "Ivan Jacob Agaloos Pesigan <learn.jeksterslab@gmail.com>"
