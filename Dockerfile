@@ -6,7 +6,10 @@ RUN apt-get update -y && apt-get install -y \
         build-essential                     \
         libopenblas-dev                     \
         libgsl-dev                       && \
-        Rscript -e "install.packages(   \
+        Rscript -e "                                                    \
+                .libPaths('/usr/local/lib/R/library');                  \
+                Sys.setenv(R_LIBS_USER = '/usr/local/lib/R/library');   \
+                install.packages(       \
                 c(                      \
                        'devtools',      \
                        'remotes',       \
@@ -32,20 +35,29 @@ RUN apt-get update -y && apt-get install -y \
               ),                        \
               repos = 'https://packagemanager.rstudio.com/all/__linux__/jammy/latest', \
               lib = '/usr/local/lib/R/library'                                         \
-        )"                                                                          && \
-        Rscript -e "remotes::install_version(                         \
+            )                                                                          \
+        "                                                                           && \
+        Rscript -e "                                                  \
+                .libPaths('/usr/local/lib/R/library');                \
+                Sys.setenv(R_LIBS_USER = '/usr/local/lib/R/library'); \
+                remotes::install_version(                             \
                         package = 'roxygen2',                         \
                         version = '5.0.1',                            \
                         repos = c(CRAN = 'https://cran.rstudio.com'), \
                         lib = '/usr/local/lib/R/library'              \
                 );                                                    \
-                tinytex::install_tinytex()"                        && \
+                tinytex::install_tinytex()                            \
+        "                                                          && \
         git clone https://github.com/mhunter1/dynr.git             && \
         cd dynr                                                    && \
         ./configure                                                && \
         make clean install                                         && \
         cd ..                                                      && \
-        rm -rf dynr
+        rm -rf dynr                                                && \
+        Rscript -e "                                                  \
+                .libPaths(c('/usr/local/lib/R/site-library', '/usr/local/lib/R/library'); \
+                Sys.setenv(R_LIBS_USER = '/usr/local/lib/R/site-library')                 \
+        "                                                                              && \
 
 # author
 MAINTAINER "Ivan Jacob Agaloos Pesigan <learn.jeksterslab@gmail.com>"
