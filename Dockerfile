@@ -5,7 +5,7 @@ RUN apt-get update -y && apt-get install -y \
         wget                                \
         vim                                 \
         build-essential                     \
-        libopenblas-openmp-dev
+        libopenblas-dev
 
 # gsl
 RUN wget https://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz \
