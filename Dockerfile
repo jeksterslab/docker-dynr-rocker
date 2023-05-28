@@ -4,8 +4,13 @@ RUN apt-get update -y && apt-get install -y \
         wget                                \
         vim                                 \
         build-essential                     \
+        cmake                               \
         libopenblas-dev                     \
-        libgsl-dev                       && \
+        liblapack-dev                       \
+        libarpack2-dev                      \
+        libsuperlu-dev                      \
+        libgsl-dev                          \
+        libarmadillo-dev                 && \
         Rscript -e "                                                    \
                 .libPaths('/usr/local/lib/R/library');                  \
                 Sys.setenv(R_LIBS_USER = '/usr/local/lib/R/library');   \
@@ -29,6 +34,10 @@ RUN apt-get update -y && apt-get install -y \
                        'tibble',        \
                        'deSolve',       \
                        'Rdpack',        \
+                       'Rcpp',          \
+                       'RcppArmadillo', \
+                       'RcppGSL',       \
+                       'Ryacas',        \
                        'testthat',      \
                        'knitr',         \
                        'rmarkdown'      \
