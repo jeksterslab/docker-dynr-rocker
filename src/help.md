@@ -6,7 +6,6 @@
 
 ```powershell
 wsl --install --distribution Ubuntu
-wsl --set-default-version 2
 ```
 
 - When prompted:
