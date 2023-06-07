@@ -86,9 +86,6 @@ R -e "                                                    \
 
 git clone https://github.com/mhunter1/dynr.git
 cd dynr
-sed -i 's/importFrom(\"utils\", \"str\", \".DollarNames\", \"packageVersion\", \"shortPathName\")/import(utils)/' NAMESPACE
-sed -i 's/Imports: MASS/Imports: utils, MASS/' DESCRIPTION.in
-sed -i 's/Imports: MASS/Imports: utils, MASS/' DESCRIPTION
 ./configure
 make clean install
 cd ..
