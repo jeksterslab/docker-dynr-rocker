@@ -34,7 +34,7 @@ If the above instructions fail, you might be using an older version of Windows. 
    - Fill in role and use case.
 
 
-## Running the dynr Docker Container
+## Running the `dynr` Docker Container
 
 - Launch `Docker Desktop`.
 - In `PowerShell` type the following to launch `Rstudio Server`:
