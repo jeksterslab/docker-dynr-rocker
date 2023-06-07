@@ -2,28 +2,29 @@
 
 ## Installing Windows Subsystem for Linux (WSL)
 
-- Download the Linux kernel update package from https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-- Double-click `wsl_update_x64.msi` to update the kernel.
 - In `PowerShell`, type the following:
 
-
 ```powershell
-wsl --set-default-version 2
 wsl --install --distribution Ubuntu
+wsl --set-default-version 2
 ```
 
 - When prompted:
     - Enter new UNIX username:
     - New password:
     - Retype new password:
-- You should see a prompt similar to the following which indicates that you are inside the newly installed `Ubuntu` instance.
+- You should see a prompt similar to the following which indicates that you are inside the newly installed `Ubuntu` instance. In the prompt, type `exit` to exit `Ubuntu`.
 
 ```bash
 USER@HOST:~$
 ```
 
-- Type `exit` to exit `Ubuntu`.
+- You might need to update the kernel. You can do this with the following:
+    - Download the Linux kernel update package from https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+    - Double-click `wsl_update_x64.msi` to update the kernel.
+- A system restart might be a good idea for all the changes to take effect.
 
+If the above instructions fail, you might be using an older version of Windows. See https://learn.microsoft.com/en-us/windows/wsl/install-manual for more details on how to manually install WSL.
 
 ## Installing Docker Desktop
 
