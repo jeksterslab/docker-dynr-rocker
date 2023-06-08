@@ -2,7 +2,9 @@
 
 ## Installing Windows Subsystem for Linux (WSL)
 
-- In `PowerShell`, type the following:
+- In `PowerShell`[^1], type the following:
+
+[^1]: Run all instances of PowerShell as administration.
 
 ```powershell
 wsl --install --distribution Ubuntu
