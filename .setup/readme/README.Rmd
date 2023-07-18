@@ -1,9 +1,27 @@
-# jeksterslab/dynr-rocker
+---
+title: "jeksterslab/dynr-rocker"
+author: "Ivan Jacob Agaloos Pesigan"
+date: "`r Sys.Date()`"
+output: github_document
+---
 
-Ivan Jacob Agaloos Pesigan
+<!-- README.md is generated from .setup/readme/README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 <!-- badges: start -->
+[![Make Project](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/make.yml/badge.svg)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/make.yml)
 [![Docker and Apptainer Build and Push](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/docker-apptainer-build-push.yml/badge.svg)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/docker-apptainer-build-push.yml)
+[![Docker and Apptainer Build and Push (Weekly)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/docker-apptainer-build-push-weekly.yml/badge.svg)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/docker-apptainer-build-push-weekly.yml)
+[![Docker Build and Push (Daily at 00:00:00)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/docker-build-push-daily-dynr-rocker.yml/badge.svg)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/docker-build-push-daily-dynr-rocker.yml)
+[![Shell Check](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/jeksterslab/docker-dynr-rocker/actions/workflows/shellcheck.yml)
 <!-- badges: end -->
 
 ## Description
