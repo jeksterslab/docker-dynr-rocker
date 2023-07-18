@@ -14,7 +14,7 @@
 #' | `ignore`         | Items to add to `.Rbuildignore`.                    |
 #'
 
-project <- "docker-dynr-rocker-devel"
+project <- "docker-dynr-rocker"
 
 pkg_cran <- c()
 
