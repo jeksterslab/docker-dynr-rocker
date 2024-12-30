@@ -97,4 +97,4 @@ apt_install    \
 
 # qgraph
 apt_install   \
-  libglpk-dev
+    libglpk-dev
