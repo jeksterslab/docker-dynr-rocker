@@ -1,4 +1,4 @@
-FROM jeksterslab/dynr-rocker
+FROM jeksterslab/dynr-rocker:latest
 
 #ADD scripts /usr/src/local/src
 #RUN chmod 777 /usr/src/local/src/setup.sh && \
