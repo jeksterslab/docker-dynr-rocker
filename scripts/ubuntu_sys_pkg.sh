@@ -98,3 +98,10 @@ apt_install    \
 # qgraph
 apt_install   \
     libglpk-dev
+
+# jags
+apt_install    \
+    pkg-config \
+    jags
+
+pkg-config --modversion jags
